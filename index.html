@@ -31,7 +31,6 @@
     <span class="description">Tasting Room & Bar</span>
     <div class="nav">
       <ul>
-        <li>Home</li>
         <li>Menu</li>
         <li>Events</li>
         <li>Venue</li>
@@ -56,8 +55,19 @@
           <div class="beer" alt="beer"></div>
         </div>
 
+        <div class="events">
+          Events! <br>Lorem ipsum dolor sit amet, commodo magna nulla id, dui sed tellus mus, aenean adipiscing consectetuer,
+          sed est in, sit elementum malesuada rutrum tincidunt nec diam. Suspendisse magna cras sit quis
+        </div>
+
+        <div class="venue">
+          Venue! <br>Et in lectus id sodales, nullam volutpat nulla ultricies, tincidunt tempus facilisis corporis at, ultricies
+          porttitor possimus, in neque viverra. Rutrum sagittis nisl vel placerat duis, mi urna
+        </div>
+
         <div class="contact_us">
-          Words! fdsafdsa fdsa a fdsa fds  fdagfdsgfds   gfdsfdsafdsa
+          Contact Us! <br>Mauris eros sit, adipiscing nisl dapibus quis eu, tellus pellentesque praesent suspendisse nibh. Accumsan
+          neque nibh wisi quis praesent amet, aliquam justo in tristique pharetra leo massa.
         </div>
       </div>
 
@@ -78,7 +88,9 @@
     </div>
 
     <div class="footer">
-      Tue - Thu: 4:30 pm - 11:00 pm | Fri - Sat: 4:30 pm - 2:00 am
+      <span style="position: relative; bottom: 30px;">Tue - Thu: 4:30 pm - 11:00 pm | Fri - Sat: 4:30 pm - 2:00 am</span>
+      <span class="dark-circle-bg"><img src="icons/Social_Icons/facebook.png"></span>
+      <span class="light-circle-bg"><img src="icons/Social_Icons/Instagram.png"></span>
     </div>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -90,6 +102,8 @@
     var previousElement = "nil";
     var mapElement = $('.map');
     var menuElement = $('.offerings');
+    var eventsElement = $('.events');
+    var venueElement = $('.venue');
     var contactElement = $('.contact_us');
 
     $(document).ready(function(){
@@ -127,9 +141,31 @@
         var menuHeight = menuElement.height();
         checkViewPort(buttonClicked);
         if (menuHeight == 0){
-          $('.offerings').css("height", "200px");
+          $('.offerings').css({height: "200px", paddingTop: "8px"});
         } else {
-          $('.offerings').css("height", "0");
+          $('.offerings').css({height: 0, paddingTop: 0});
+        }
+        previousElement = buttonClicked;
+      }
+
+      if (buttonClicked == 'Events'){
+        var eventsHeight = eventsElement.height();
+        checkViewPort(buttonClicked);
+        if (eventsHeight == 0){
+          $('.events').css("height", "200px");
+        } else {
+          $('.events').css("height", "0");
+        }
+        previousElement = buttonClicked;
+      }
+
+      if (buttonClicked == 'Venue'){
+        var venueHeight = venueElement.height();
+        checkViewPort(buttonClicked);
+        if (venueHeight == 0){
+          $('.venue').css("height", "200px");
+        } else {
+          $('.venue').css("height", "0");
         }
         previousElement = buttonClicked;
       }
@@ -171,19 +207,39 @@
 
     function closeAllViewPortContents(elementToPreserve){
       if (elementToPreserve == 'Location'){
-        //$('.map').css("height", "0");
-        $('.offerings').css("height", "0");
+//        $('.map').css("height", "0");
+        $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.events').css("height", "0");
+        $('.venue').css("height", "0");
         $('.contact_us').css("height", "0");
       }
       else if (elementToPreserve == 'Menu'){
         $('.map').css("height", "0");
-        //$('.offerings').css("height", "0");
+//        $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.events').css("height", "0");
+        $('.venue').css("height", "0");
+        $('.contact_us').css("height", "0");
+      }
+      else if (elementToPreserve == 'Events'){
+        $('.map').css("height", "0");
+        $('.offerings').css({height: "0", paddingTop: "0"});
+//        $('.events').css("height", "0");
+        $('.venue').css("height", "0");
+        $('.contact_us').css("height", "0");
+      }
+      else if (elementToPreserve == 'Venue'){
+        $('.map').css("height", "0");
+        $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.events').css("height", "0");
+//        $('.venue').css("height", "0");
         $('.contact_us').css("height", "0");
       }
       else if (elementToPreserve == 'Contact Us'){
         $('.map').css("height", "0");
-        $('.offerings').css("height", "0");
-        //$('.contact_us').css("height", "0");
+        $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.events').css("height", "0");
+        $('.venue').css("height", "0");
+//        $('.contact_us').css("height", "0");
       }
     }
 
