@@ -9,61 +9,76 @@
   padding: 0;
   margin: 0;
 }
+.float_left{
+  float: left;
+}
+.float_right{
+  float: right;
+}
 body{
   background: url('../pics/dark_tweed.png') repeat;
   color: #eff2c4;
 }
 .menu_bar{
   position: fixed;
-  display: block;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
-  font-family: 'Dancing Script', sans-serif;
-  font-size: 1.4em;
-  line-height: .9em;
   background-color:rgba(30, 30, 30, 0.9);
-  z-index: 100;
+  z-index: 40;
 }
-.menu_bar .logo{
-  position: relative;
-  float: left;
-  margin-left: 5px;
+.logo{
+  position: absolute;
+  width: 1000px;
+  height: 800px;
+  top: -220;
+  left: -50;
   font-family: 'Condiment', sans-serif;
-  font-size: 8.2em;
-  line-height: 1.6em;
+  font-size: 12em;
   text-shadow: 5px 15px 5px #000;
-  z-index: 100;
+  z-index: 50;
 }
-.menu_bar .description{
-  position: relative;
+.description{
+  position: absolute;
+  top: 0;
+  left: 420px;
+  color: #ecc730;
   font-family: 'abril fatface', sans-serif;
   font-size: 1.2em;
   line-height: 2.3em;
-  z-index: 99;
-  left: -100px;
+  z-index: 50;
 }
-.menu_bar .nav{
-  float: right;
-  margin-right: 10px;
-  height: 100%;
+.nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50px;
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 1.4em;
+  line-height: .9em;
   opacity: 1;
+  z-index: 90;
 }
-.menu_bar .nav ul li{
+.nav ul li{
   padding: 15px;
   list-style:none;
   float:left;
-  color: #eff2c4;
 }
-.menu_bar .nav ul li:hover{
+.nav ul li:hover{
   background-color: #222;
   cursor: pointer;
   transition: all .15s
 }
 .container{
   width: inherit;
-  text-align: center;
+  padding: 5px;
+}
+.container table{
+  margin: 0 auto;
+}
+.container table tr td{
+  padding: 0 10px;
 }
 .hero{
   background-image: url('../pics/KJ12.jpg');
@@ -95,8 +110,10 @@ body{
   width: 100%;
   height: 0;
   padding-top: 8px;
+  text-align: center;
   overflow: hidden;
-  transition: 1s;
+  transition: .5s;
+  z-index: 90;
 }
 .offerings .food{
   display: inline-block;
@@ -107,6 +124,7 @@ body{
   border-radius: 60px;
   cursor: pointer;
   transition: .3s;
+  z-index: 90;
 }
 .offerings .food:hover{
   transition: .3s;
@@ -121,6 +139,7 @@ body{
   border-radius: 60px;
   cursor: pointer;
   transition: .3s;
+  z-index: 90;
 }
 .offerings .wine:hover {
   transition: .3s;
@@ -135,6 +154,7 @@ body{
   border-radius: 60px;
   cursor: pointer;
   transition: .3s;
+  z-index: 90;
 }
 .offerings .beer:hover {
   transition: .3s;
@@ -146,51 +166,70 @@ body{
   overflow: hidden;
   transition: 1s;
 }
-.map{
+.promos{
   width: 100%;
   height: 0;
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 1.3em;
   overflow: hidden;
-  transition: 1s;
+  transition: .5s;
 }
 .events{
   width: 100%;
   height: 0;
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 1.3em;
   overflow: hidden;
-  transition: 1s;
+  transition: .5s;
 }
 .venue{
   width: 100%;
   height: 0;
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 1.3em;
   overflow: hidden;
-  transition: 1s;
+  transition: .5s;
+}
+.map{
+  width: 100%;
+  height: 0;
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 1.3em;
+  overflow: hidden;
+  transition: .5s;
 }
 .contact_us{
   width: 100%;
   height: 0;
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 1.3em;
   overflow: hidden;
-  transition: 1s;
+  transition: .5s;
 }
 .footer{
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 90px;
-  text-align: center;
+  height: 80px;
   font-family: 'Abril Fatface', sans-serif;
   font-size: 1.2em;
   background-color:rgba(30, 30, 30, 0.9);
   z-index: 100;
 }
 .footer .dark-circle-bg img{
-  position: relative;
-  right: 0;
   background-color:rgba(30, 30, 30, 0.5);
   border-radius: 50px;
 }
+.footer .dark-circle-bg img:hover{
+  background-color:rgba(50, 50, 50, 0.5);
+  transition: .1s;
+}
 .footer .light-circle-bg img{
-  position: relative;
-  right: 0;
   background-color:rgba(100, 100, 100, 0.5);
   border-radius: 50px;
+}
+.footer .light-circle-bg img:hover{
+  background-color:rgba(80, 80, 80, 0.5);
+  transition: .1s;
 }

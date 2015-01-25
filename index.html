@@ -4,16 +4,21 @@
   <meta http-equiv='expires' sidebar-content='0'>
   <meta http-equiv='pragma' sidebar-content='no-cache'>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js'></script>
+  <!--jQuery-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>-->
+
+  <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>-->
+  <!--<script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
+
+
+  <!--<script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js'></script>-->
 
   <!--slickjs slider-->
   <link rel="stylesheet" type="text/css" href="slick-1.3.15/slick/slick.css"/>
-
   <link rel="stylesheet" type="text/css" href="css/all.css"/>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
 
+  <!--Google Fonts-->
   <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'><!--Logo font-->
   <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'><!--Header script-->
   <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'><!--Important info-->
@@ -26,19 +31,20 @@
 <html>
   <body>
 
-  <div class="menu_bar">
-    <span class="logo">killjoy</span>
+    <div class="menu_bar"></div>
+    <span class="logo"><img width="80%" height="80%" src="icons/killjoy_gold_trial1.svg"></span>
+    <!--<span class="logo">killjoy</span>-->
     <span class="description">Tasting Room & Bar</span>
     <div class="nav">
       <ul>
         <li>Menu</li>
+        <li>Promos</li>
         <li>Events</li>
         <li>Venue</li>
         <li>Location</li>
         <li>Contact Us</li>
       </ul>
     </div>
-  </div>
 
     <div class="container">
       <div class="hero"></div>
@@ -50,27 +56,97 @@
         </div>
 
         <div class="offerings">
-          <div class="food" alt="fondue"></div>
-          <div class="wine" alt="wine"></div>
-          <div class="beer" alt="beer"></div>
+          <div class="food" alt="fondue">
+            <div class="food_menu_front" style="display: none;"><iframe width="465px" height="800px" style="margin: 5px 0;" src="Fondue_menu_front.pdf"></iframe></div>
+            <div class="food_menu_back" style="display: none;"><iframe width="465px" height="800px" style="margin: 5px 0;" src="Fondue_menu_back.pdf"></iframe></div>
+          </div>
+          <div class="wine" alt="wine">
+            <div class="wine_menu" style="display: none;"><iframe width="465px" height="800px" style="margin: 5px 0;" src="Wine_menu.pdf"></iframe></div>
+          </div>
+          <div class="beer" alt="beer">
+            <div class="beer_menu" style="display: none;"><iframe width="465px" height="800px" style="margin: 5px 0;" src="Beer_menu.pdf"></iframe></div>
+          </div>
+        </div>
+
+        <div class="promos">
+          <table>
+            <th>Edible Specials</th>
+            <th>Drinkable Specials</th>
+            <tr>
+              <td>
+                All Fondue items %10 off with the purchase of a glass of wine.
+              </td>
+              <td>
+                PBR Tallboys $1 off when wearing a suit jacket.
+              </td>
+            </tr>
+          </table>
         </div>
 
         <div class="events">
-          Events! <br>Lorem ipsum dolor sit amet, commodo magna nulla id, dui sed tellus mus, aenean adipiscing consectetuer,
-          sed est in, sit elementum malesuada rutrum tincidunt nec diam. Suspendisse magna cras sit quis
+          <table>
+            <th>Music</th>
+            <th>Art</th>
+            <th>Holidays</th>
+            <th>Private Parties</th>
+            <tr>
+              <td>
+                Listing of Music Events
+              </td>
+              <td>
+                Collections of local artwork
+              </td>
+              <td>
+                Holiday Special Events
+              </td>
+              <td>
+                Private Party Hosting Details
+              </td>
+            </tr>
+          </table>
         </div>
 
         <div class="venue">
-          Venue! <br>Et in lectus id sodales, nullam volutpat nulla ultricies, tincidunt tempus facilisis corporis at, ultricies
-          porttitor possimus, in neque viverra. Rutrum sagittis nisl vel placerat duis, mi urna
+          <table>
+            <th>Rental Fee</th>
+            <th>Catering Menu</th>
+            <tr>
+              <td>
+                Rental Fees include: this, that, and the other...
+              </td>
+              <td>
+                Catering Menu is as follows...
+              </td>
+            </tr>
+          </table>
         </div>
 
         <div class="contact_us">
-          Contact Us! <br>Mauris eros sit, adipiscing nisl dapibus quis eu, tellus pellentesque praesent suspendisse nibh. Accumsan
-          neque nibh wisi quis praesent amet, aliquam justo in tristique pharetra leo massa.
+          <table>
+            <th>Hours</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <tr>
+              <td>
+                Tue - Thu: 4:30 pm - 11:00 pm<br>
+                Fri - Sat: 4:30 pm - 2:00 am<br>
+              </td>
+              <td>
+                Killjoy Tasting Room<br>
+                400 W. 4th Ave<br>
+                Anchorage, Alaska 99501
+              </td>
+              <td>
+                (907) 278-0010
+              </td>
+              <td>
+                contact@killjoytastingroom.com
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
-
 
       <div class="slider">
         <div><img width="200px" height="200px" src="pics/slider_apps1.jpg"></div>
@@ -84,17 +160,19 @@
         <div><img width="267px" height="200px" src="pics/slider_twenties.jpg"></div>
       </div>
 
-
     </div>
 
     <div class="footer">
-      <span style="position: relative; bottom: 30px;">Tue - Thu: 4:30 pm - 11:00 pm | Fri - Sat: 4:30 pm - 2:00 am</span>
-      <span class="dark-circle-bg"><img src="icons/Social_Icons/facebook.png"></span>
-      <span class="light-circle-bg"><img src="icons/Social_Icons/Instagram.png"></span>
+      <span style="float: left; margin: 30px 0 30px 20%;">Tue - Thu: 4:30 pm - 11:00 pm | Fri - Sat: 4:30 pm - 2:00 am</span>
+      <span class="light-circle-bg" style="float: right"><a href="http://instagram.com/killjoytastingroom"><img src="icons/Social_Icons/Instagram.png" ></a></span>
+      <span class="dark-circle-bg" style="float: right"><a href="https://www.facebook.com/killjoytastingroom"><img src="icons/Social_Icons/facebook.png"></a></span>
     </div>
+
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/swanky-purse/jquery-ui.css" />
   <script type="text/javascript" src="slick-1.3.15/slick/slick.min.js"></script>
 
   <script type="text/javascript">
@@ -102,6 +180,7 @@
     var previousElement = "nil";
     var mapElement = $('.map');
     var menuElement = $('.offerings');
+    var promosElement = $('.promos');
     var eventsElement = $('.events');
     var venueElement = $('.venue');
     var contactElement = $('.contact_us');
@@ -118,6 +197,7 @@
         centerMode: true,
         variableWidth: true
       });
+
 
     });
 
@@ -144,6 +224,17 @@
           $('.offerings').css({height: "200px", paddingTop: "8px"});
         } else {
           $('.offerings').css({height: 0, paddingTop: 0});
+        }
+        previousElement = buttonClicked;
+      }
+
+      if (buttonClicked == 'Promos'){
+        var promosHeight = promosElement.height();
+        checkViewPort(buttonClicked);
+        if (promosHeight == 0){
+          $('.promos').css("height", "200px");
+        } else {
+          $('.promos').css("height", "0");
         }
         previousElement = buttonClicked;
       }
@@ -184,8 +275,8 @@
     });
 
     function setLinkActive(thisElement){
-      $('.menu_bar .nav ul li').css("backgroundColor","");
-      $(thisElement).css("backgroundColor","#222");
+      $('.nav ul li').css("backgroundColor","");
+      $(thisElement).css({backgroundColor: "#555", transition: ".1s"});
     }
 
     function checkViewPort(currentElement){
@@ -209,6 +300,7 @@
       if (elementToPreserve == 'Location'){
 //        $('.map').css("height", "0");
         $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.promos').css("height", "0");
         $('.events').css("height", "0");
         $('.venue').css("height", "0");
         $('.contact_us').css("height", "0");
@@ -216,6 +308,15 @@
       else if (elementToPreserve == 'Menu'){
         $('.map').css("height", "0");
 //        $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.promos').css("height", "0");
+        $('.events').css("height", "0");
+        $('.venue').css("height", "0");
+        $('.contact_us').css("height", "0");
+      }
+      else if (elementToPreserve == 'Promos'){
+        $('.map').css("height", "0");
+        $('.offerings').css({height: "0", paddingTop: "0"});
+//        $('.promos').css("height", "0");
         $('.events').css("height", "0");
         $('.venue').css("height", "0");
         $('.contact_us').css("height", "0");
@@ -223,6 +324,7 @@
       else if (elementToPreserve == 'Events'){
         $('.map').css("height", "0");
         $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.promos').css("height", "0");
 //        $('.events').css("height", "0");
         $('.venue').css("height", "0");
         $('.contact_us').css("height", "0");
@@ -230,6 +332,7 @@
       else if (elementToPreserve == 'Venue'){
         $('.map').css("height", "0");
         $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.promos').css("height", "0");
         $('.events').css("height", "0");
 //        $('.venue').css("height", "0");
         $('.contact_us').css("height", "0");
@@ -237,10 +340,96 @@
       else if (elementToPreserve == 'Contact Us'){
         $('.map').css("height", "0");
         $('.offerings').css({height: "0", paddingTop: "0"});
+        $('.promos').css("height", "0");
         $('.events').css("height", "0");
         $('.venue').css("height", "0");
 //        $('.contact_us').css("height", "0");
       }
+    }
+
+    $('.food').on("click", function(){
+      var original_front = $('.food_menu_front');
+      var original_back = $('.food_menu_back');
+      var clone_front = original_front.clone();
+      var clone_back = original_back.clone();
+      var sideSelected = 0;
+      var currentTitle = "Edible Offerings - Front Page";
+      openDialogTwoSides(clone_front, clone_back, sideSelected, currentTitle);
+    });
+
+    function openDialogTwoSides(clone_front, clone_back, sideSelected, currentTitle){
+      var clone;
+      if (sideSelected == 0){
+        clone = clone_front;
+      } else {
+        clone = clone_back;
+      }
+      $(clone).dialog({
+        autoOpen: true,
+        title: currentTitle,
+        height: 800,
+        width: 500,
+        modal: true,
+        show: { effect: "fadeIn", duration: 400 },
+        hide: { effect: "fadeOut", duration: 400 },
+        buttons: [
+          {
+            text: "Flip Over",
+            id: "food_menu_flip_over",
+            click: function() {
+              if (sideSelected == 0){
+                currentTitle = "Edible Offerings - Back Page";
+                sideSelected = 1;
+              } else {
+                currentTitle = "Edible Offerings - Front Page";
+                sideSelected = 0;
+              }
+              $(clone).remove();
+              openDialogTwoSides(clone_front, clone_back, sideSelected, currentTitle);
+            }
+          }
+        ],
+        close: function() {
+          $(clone).remove();
+        }
+      });
+    }
+
+    $('.wine').on("click", function(){
+      var original = $('.wine_menu');
+      var clone = original.clone();
+      var current_title = "Wine Selections";
+      openDialog(clone, current_title);
+    });
+
+    $('.beer').on("click", function(){
+      var original = $('.beer_menu');
+      var clone = original.clone();
+      var current_title = "Beer Selections";
+      openDialog(clone, current_title);
+    });
+
+    function openDialog(clone, current_title){
+      $(clone).dialog({
+        autoOpen: true,
+        title: current_title,
+        height: 800,
+        width: 500,
+        modal: true,
+        show: { effect: "fadeIn", duration: 400 },
+        hide: { effect: "fadeOut", duration: 400 },
+        buttons: [
+          {
+            text: "Done",
+            click: function() {
+              $(clone).remove();
+            }
+          }
+        ],
+        close: function() {
+          $(clone).remove();
+        }
+      });
     }
 
   </script>
