@@ -70,14 +70,14 @@
 
         <div class="promos">
           <table>
-            <th>Edible Specials</th>
-            <th>Drinkable Specials</th>
+            <th>Weekly Specials</th>
             <tr>
               <td>
-                All Fondue items %10 off with the purchase of a glass of wine.
-              </td>
-              <td>
-                PBR Tallboys $1 off when wearing a suit jacket.
+                TAP TUESDAY: &nbsp; $3 off any food item with purchase of any tap beer<br>
+                WINE DOWN WEDNESDAY: &nbsp; $3 off any food item with purchase of any wine<br>
+                THIRSTY THURSDAY: &nbsp; $3 off any food item with purchase of any house specialty (seasonal house specialty, beer blend, or wine flight)<br>
+                FONDUE FRIDAY: &nbsp; $4 off fondue from $4:30-7<br>
+                SUIT UP SATURDAY: &nbsp; $5 off any food menu when you wear a suit
               </td>
             </tr>
           </table>
@@ -100,7 +100,15 @@
                 Holiday Special Events
               </td>
               <td>
-                Private Party Hosting Details
+                <u>Monday-Thursday</u><br>
+                Space from 4:30-11pm $900(min)
+                or $125/hour space rental*<br>
+                <u>Friday-Saturday</u><br>
+                Space from 4:30-10pm $1,800(min)
+                or $175/hour space rental*<br>
+                <u>Sunday</u><br>
+                $600 Minimum or $125/hour space rental*<br>
+                *Rental increased by $75/hr for outside catering<br>
               </td>
             </tr>
           </table>
@@ -129,8 +137,9 @@
             <th>Email</th>
             <tr>
               <td>
-                Tue - Thu: 4:30 pm - 11:00 pm<br>
-                Fri - Sat: 4:30 pm - 2:00 am<br>
+                Tues-Thurs &nbsp; 4:30pm-10:30<br>
+                Friday &nbsp; 4:30pm-1:30<br>
+                Saturday &nbsp; 6pm-1:30
               </td>
               <td>
                 Killjoy Tasting Room<br>
@@ -152,8 +161,8 @@
         <div><img width="200px" height="200px" src="pics/slider_apps1.jpg"></div>
         <div><img width="275px" height="200px" src="pics/slider_band1.jpg"></div>
         <div><img width="300px" height="200px" src="pics/slider_apps2.jpg"></div>
-        <div><img width="293px" height="200px" src="pics/slider_flapper_girls.jpg"></div>
-        <div><img width="261px" height="200px" src="pics/slider_fondue.jpg"></div>
+        <!--<div><img width="293px" height="200px" src="pics/slider_flapper_girls.jpg"></div>-->
+        <!--<div><img width="261px" height="200px" src="pics/slider_fondue.jpg"></div>-->
         <div><img width="300px" height="200px" src="pics/slider_band2.jpg"></div>
         <div><img width="300px" height="200px" src="pics/slider_apps3.jpg"></div>
         <div><img width="300px" height="200px" src="pics/slider_venue1.jpg"></div>
@@ -163,7 +172,7 @@
     </div>
 
     <div class="footer">
-      <span style="float: left; margin: 30px 0 30px 20%;">Tue - Thu: 4:30 pm - 11:00 pm | Fri - Sat: 4:30 pm - 2:00 am</span>
+      <span style="float: left; margin: 30px 0 30px 20%;">Tues-Thurs &nbsp; 4:30pm-10:30 | Friday &nbsp; 4:30pm-1:30 | Saturday &nbsp; 6pm-1:30</span>
       <span class="light-circle-bg" style="float: right"><a href="http://instagram.com/killjoytastingroom"><img src="icons/Social_Icons/Instagram.png" ></a></span>
       <span class="dark-circle-bg" style="float: right"><a href="https://www.facebook.com/killjoytastingroom"><img src="icons/Social_Icons/facebook.png"></a></span>
     </div>
@@ -186,8 +195,10 @@
     var contactElement = $('.contact_us');
 
     $(document).ready(function(){
+      var pic_count = $('.slider div').size();
+      pic_count -= 1;  //the total index beginning at zero
       $('.slider').slick({
-        slidesToShow: 8,
+        slidesToShow: pic_count,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2500,
@@ -243,7 +254,7 @@
         var eventsHeight = eventsElement.height();
         checkViewPort(buttonClicked);
         if (eventsHeight == 0){
-          $('.events').css("height", "200px");
+          $('.events').css("height", "250px");
         } else {
           $('.events').css("height", "0");
         }
@@ -282,7 +293,7 @@
     function checkViewPort(currentElement){
       //Initally closed
       if (viewPortOpen == false){
-        $('.view_port').css("height", "200px");
+        $('.view_port').css("height", "250px");
         viewPortOpen = true;
       }
       //Already open, and clicked elsewhere
